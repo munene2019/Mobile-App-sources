@@ -1,0 +1,112 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="grad">
+    <ion-row center style="font-size:10px;width:100%;height: 1vh">
+      
+      <ion-col>
+        <div style="color:#000000">
+
+        </div>
+      </ion-col>
+      <ion-col style="margin-top: -10px " class="textcolor">
+        <div class="textcolor" style="color:#000000">
+          <ion-title class="textcolor" style="margin-left: -100px;margin-top: 0px"></ion-title>
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-navbar>
+
+</ion-header>
+<ion-content  scrollY="false" style="background-size:cover;margin-top: -60px;height: 150%">
+
+
+
+<div  class="pagebackground"class="container2" style="position:absolute;left:0px;top:0px;width:100%">
+    <div class="row row2" >
+      <div style="text-align:center;width:100%" ng-show="phone_uuid_not_present()">
+
+        <div style="padding:0px 20px 0px 20px;">
+
+            <div class="center" >
+              <div style="position:absolute;top:-25px;left:-40px;color:#ffffff;font-size:11px;padding:5px;white-space: nowrap;overflow: hidden;">Mobile Number</div>
+
+
+              <ion-row  class="borderdet"
+                        style="height:45px; width:100%;margin-left: 0%; margin-right: 0%; border-radius:5px; border-right: 0%; font-size:12px;">
+
+                <ion-col class="center">
+                  <ion-item class="fieldfontsize"  color="mytran" style="font-size:12px" no-lines>
+                    <input  class="fieldfontsize"
+                            style="padding-left:10px;;height:100%;border:none;width:100%"
+                            type="text" maxlength="10" placeholder="07...." [(ngModel)]="objectblock.user" />
+                  </ion-item>
+
+                </ion-col>
+
+              </ion-row>
+            </div>
+            <div class="labelcol" style="padding:3px;width:100%;" *ngIf="error==1">Enter a valid username</div>
+            <br>
+
+
+
+
+            <div class="center" >
+
+
+              <ion-row  class="borderdet"
+                        style="height:45px; width:100%;margin-left: 0%; margin-right: 0%; border-radius:5px; border-right: 0%; font-size:12px;">
+
+                <ion-col class="center">
+                  <ion-item class="fieldfontsize"  color="mytran" style="font-size:12px" no-lines>
+                    <input  class="fieldfontsize"
+                            style="padding-left:10px;;height:100%;border:none;width:100%"
+                            type="password" maxlength="10" placeholder="PIN" [(ngModel)]="objectblock.pass" />
+                  </ion-item>
+
+                </ion-col>
+
+              </ion-row>
+
+
+            </div>
+            <div class="labelcol" style="padding:3px;width:100%" *ngIf="error==2">Enter a valid password</div>
+            <br>
+
+
+
+          <div  class="textcolor"   class="center" >
+            <button ion-button block class="grad" mode="ios"  (click)="submit(objectblock)"
+                    no-border  style="border-radius:10px;font-size:14px;height:45px;width:70%" >Login</button>
+          </div>
+          <div class="textcolor"  style="padding:3px;width:100%;font-size:11px" *ngIf="error==2">Incorrect Login credentials</div>
+          <div  class="textcolor"   class="center" >
+          <ion-row style="">
+            <div  class="white"class="center" style="margin-left: 10px" >
+              <p style="margin: auto; text-align: center; padding-top: 12vh; color: #000">
+
+                <span class="textcolor"style="font-size: 17px"><b (click)="openPage('SignUpPage')" >Sign Up</b></span>
+              </p>
+            </div>
+            
+          </ion-row>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</ion-content>
+

@@ -1,0 +1,56 @@
+
+<ion-menu [content]="content" style="background: transparent">
+  <ion-content class="cont">
+
+    <ion-list class="list">
+
+      <ion-item class="profimage"  style="background-color: #174a8a;" no-lines menuClose >
+        <ion-row  >
+          <ion-col clas="centre">
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+        <div>
+        </div>
+        <hr>
+      </ion-item>
+
+
+      <br>
+
+
+
+      <!--<ion-item class="listitem" (click)="openPage1('FeedbackPage');" no-lines menuClose>-->
+        <!--<ion-icon class="icon" name="ios-book-outline" item-left></ion-icon>-->
+        <!--Feedback-->
+      <!--</ion-item>-->
+      <div *ngIf="globalVars.getlogoutchek()=='logout'">
+        <ion-item class="listitem" (click)="openPage1('ChangePasswordPage');" no-lines menuClose>
+          <ion-icon class="icon" name="key" item-left></ion-icon>
+
+          Change PIN
+        </ion-item>
+      </div>
+      <div *ngIf="globalVars.getlogoutchek() !='logout'">
+      <ion-item class="listitem" (click)="openPage2();" style="background-color: transparent;" no-lines menuClose>
+        <ion-icon class="icon" name="md-log-in" item-left></ion-icon>
+        Log Out
+      </ion-item>
+    </div>
+      <div *ngIf="globalVars.getlogoutchek()=='logout'">
+        <ion-item class="listitem" (click)="openPage3();" no-lines menuClose>
+          <ion-icon class="icon" name="md-log-out" item-left></ion-icon>
+          Log Out
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

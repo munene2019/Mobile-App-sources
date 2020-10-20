@@ -1,0 +1,55 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="grad">
+    <ion-title style="text-align: center">Main Services</ion-title>
+   <button ion-button icon-only menuToggle right="-25px">
+
+
+
+     <ion-icon name="menu" color="mywhite" style="font-size:20px"></ion-icon>
+   </button>
+ </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content  style="background-color: #ebebeb">
+
+
+
+  <div class="container2" style="font-size:12px;width:100%;position:absolute;top:0px;left:0px;z-index:99999999;padding:15px">
+    <br>
+    <br>
+
+    <ion-row style="width:100%;margin-left: 40px">
+      <ion-col col-6 class="text-center" >
+        <img src="assets/handdollar.png" (click)="openPage('Balance Inquiry')"  style="height:60px;width:60px"/>
+        <div style="margin-left: -15px;color:white"class="myfontsize1">
+          Balance Inquiry
+        </div>
+      </ion-col>
+
+      <ion-col col-6  class="text-center"  >
+        <img src="assets/sendmoney.png" (click)="openPage('Funds Transfer')" style="height:60px;width:60px"/>
+        <div style="margin-left: -25px;color: white;"class="myfontsize1" >
+          Funds Transfer
+        </div>
+      </ion-col>
+
+    </ion-row>
+    
+    
+
+   
+ 
+    
+
+  </div>
+</ion-content>
